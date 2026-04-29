@@ -27,6 +27,7 @@ Two main empirical claims:
 
 
 ## Reproducing LSUN experiments
+(old. this was mentioned by repo. for specefics look below)
 
 **With DCGAN:**
 
@@ -49,3 +50,14 @@ med_filtered_loss = scipy.signal.medfilt(-Loss_D, dtype='float64'), 101)
 ```
 
 More improved README in the works.
+
+## Reproducing WGAN paper experiments
+
+pre-requisite: make a conda environment and do the installs as mentioned in requirements.txt for local
+
+#### wgan_figure1.ipynb, wgan_figure2.ipynb, wgan_figure3.ipynb
+These can be reproduced trivially on kaggle
+
+#### wgan_figure4.ipynb. 
+Reproducing it on kaggle requires attaching the dataset `https://www.kaggle.com/datasets/udaykalyansreenivasa/lsun-bedroom-64x64-10perc`
+Reproducing locally involves downloading the same dataset and changing the paths appropriately
