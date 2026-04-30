@@ -62,11 +62,11 @@ More improved README in the works.
 ## Dataset details
 We use the LSUN datset as mentioned in the paper. but we take a 10% sample and preprocess it first as in convert to 64*64 as done in paper and compress to 85%
 
-[https://www.kaggle.com/datasets/udaykalyansreenivasa/lsun-bedroom-64x64-10perc](kaggle link of pre-processed dataset)
+(https://www.kaggle.com/datasets/udaykalyansreenivasa/lsun-bedroom-64x64-10perc)[kaggle link of pre-processed dataset]
 
 ## Presentation is present in wgan_presentation.pdf
 
-## youtube link: [https://youtu.be/-z4BvZeaIM0?si=EkwyXxNYB750j-8z](here)
+## youtube link: (https://youtu.be/-z4BvZeaIM0?si=EkwyXxNYB750j-8z)[here]
 
 ## Reproducing WGAN paper experiments
 
