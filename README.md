@@ -64,6 +64,10 @@ We use the LSUN datset as mentioned in the paper. but we take a 10% sample and p
 
 [https://www.kaggle.com/datasets/udaykalyansreenivasa/lsun-bedroom-64x64-10perc](kaggle link of pre-processed dataset)
 
+## Presentation is present in wgan_presentation.pdf
+
+## youtube link: [https://youtu.be/-z4BvZeaIM0?si=EkwyXxNYB750j-8z](here)
+
 ## Reproducing WGAN paper experiments
 
 pre-requisite: make a conda environment and do the installs as mentioned in requirements.txt for local
