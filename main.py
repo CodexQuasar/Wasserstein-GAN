@@ -51,7 +51,8 @@ if __name__=="__main__":
 
     if opt.experiment is None:
         opt.experiment = 'samples'
-    os.system('mkdir {0}'.format(opt.experiment))
+
+    os.makedirs(opt.experiment, exist_ok=True)
 
     opt.manualSeed = random.randint(1, 10000) # fix seed
     print("Random Seed: ", opt.manualSeed)
@@ -81,13 +82,35 @@ if __name__=="__main__":
     #                             transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
     #                         ]))
     elif opt.dataset == 'lsun':
-        dataset = dset.ImageFolder(root=opt.dataroot,
-                            transform=transforms.Compose([
-                                # transforms.Resize(opt.imageSize), # dont need crop and resize. already done
-                                # transforms.CenterCrop(opt.imageSize),
-                                transforms.ToTensor(),
-                                transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
-                            ]))
+        from PIL import Image
+        from torch.utils.data import Dataset
+
+        class FlatImageDataset(Dataset):
+            def __init__(self, root, transform=None):
+                self.root = root
+                self.transform = transform
+                self.files = [os.path.join(root, f) for f in os.listdir(root)
+                            if f.lower().endswith(('.png', '.jpg', '.jpeg'))]
+
+            def __len__(self):
+                return len(self.files)
+
+            def __getitem__(self, idx):
+                img = Image.open(self.files[idx]).convert("RGB")
+                if self.transform:
+                    img = self.transform(img)
+                return img, 0   # dummy label
+
+        dataset = FlatImageDataset(
+            root=opt.dataroot,
+            transform=transforms.Compose([
+                transforms.Resize(opt.imageSize),
+                transforms.CenterCrop(opt.imageSize),
+                transforms.ToTensor(),
+                transforms.Normalize((0.5, 0.5, 0.5),
+                                    (0.5, 0.5, 0.5)),
+            ])
+        )
     elif opt.dataset == 'cifar10':
         dataset = dset.CIFAR10(root=opt.dataroot, download=True,
                             transform=transforms.Compose([
