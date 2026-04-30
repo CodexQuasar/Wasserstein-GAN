@@ -1,6 +1,8 @@
 Wasserstein GAN
 ===============
 
+### Below are the instructions as written in the original repo. scroll to see the README instructions we have written.
+
 Code accompanying the paper ["Wasserstein GAN"](https://arxiv.org/abs/1701.07875)
 
 ## A few notes
@@ -51,12 +53,23 @@ med_filtered_loss = scipy.signal.medfilt(-Loss_D, dtype='float64'), 101)
 
 More improved README in the works.
 
+=======
+
+# WGAN README
+
+=======
+
+## Dataset details
+We use the LSUN datset as mentioned in the paper. but we take a 10% sample and preprocess it first as in convert to 64*64 as done in paper and compress to 85%
+
+[https://www.kaggle.com/datasets/udaykalyansreenivasa/lsun-bedroom-64x64-10perc](kaggle link of pre-processed dataset)
+
 ## Reproducing WGAN paper experiments
 
 pre-requisite: make a conda environment and do the installs as mentioned in requirements.txt for local
 
 #### wgan_figure1.ipynb, wgan_figure2.ipynb, wgan_figure3.ipynb
-These can be reproduced trivially on kaggle
+These can be reproduced trivially on kaggle/colab
 
 #### wgan_figure4.ipynb. 
 Reproducing it on kaggle requires attaching the dataset `https://www.kaggle.com/datasets/udaykalyansreenivasa/lsun-bedroom-64x64-10perc`
