@@ -66,7 +66,8 @@ Reproducing locally involves downloading the same dataset and changing the paths
 
 #### left half of figures 6, 7, 8 can be reproduced on the branch pruna-work
 
-#### right half of figure 6, 7, 8 can be reproduced in the "Comparision with standard GAN and plots"/standardgan.ipynb
+#### right half of figure 6 can be reproduced in the "Comparision with standard GAN and plots"/standardgan.ipynb
+#### right half of figure 7,8 can be reproduced in figures-7:right,8:right.ipynb
 
 ## contribution:
 
