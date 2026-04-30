@@ -62,6 +62,8 @@ These can be reproduced trivially on kaggle
 Reproducing it on kaggle requires attaching the dataset `https://www.kaggle.com/datasets/udaykalyansreenivasa/lsun-bedroom-64x64-10perc`
 Reproducing locally involves downloading the same dataset and changing the paths appropriately
 
+#### figure 5 can be reproduced with "Comparision with standard GAN and plots"/plots.ipynb
+
 #### left half of figures 6, 7, 8 can be reproduced on the branch pruna-work
 
 #### right half of figure 6, 7, 8 can be reproduced in the "Comparision with standard GAN and plots"/standardgan.ipynb
