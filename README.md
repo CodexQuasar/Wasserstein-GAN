@@ -68,7 +68,7 @@ Reproducing locally involves downloading the same dataset and changing the paths
 
 ## contribution:
 
-Uday Kalyan - image preprocessing and dataset creation, pytorch compatiblity, reproducing figure 1,2,3,4
-Adithya Arakhrao - figure 5, right half of 6
-Purna Sai - left halves of figure 6, 7, 8
-Aarjav desai - right halves of figure 7, 8
+- Uday Kalyan - image preprocessing and dataset creation, pytorch compatiblity, reproducing figure 1,2,3,4
+- Adithya Arakhrao - figure 5, right half of 6
+- Purna Sai - left halves of figure 6, 7, 8
+- Aarjav desai - right halves of figure 7, 8
